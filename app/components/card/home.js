@@ -13,6 +13,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Styles from '../../styles/card.style'
 import { headerStyle, titleStyle } from '../../styles/header.style'
 import ButtonRight from '../header/button-right'
+import ButtonLeft from '../header/button-left'
 import * as DetailActions from '../../actions/detail'
 
 function mapStateToProps(state) {
@@ -29,11 +30,15 @@ class Home extends Component {
             style: headerStyle,
             titleStyle: titleStyle,
             right: (<ButtonRight
-                icon="menu"
+                icon="settings"
                 navigate={navigate}
                 to="Settings"
             />),
-            left: null
+            left: (<ButtonLeft
+                icon="menu"
+                navigate={navigate}
+                to="DrawerOpen"
+            />)
         })
     }
 
